@@ -1,12 +1,12 @@
 import React from "react"
 
 
-function RestaurantsList() {
+function AddReview() {
   return (
     <div className="app">
-     
+      Add Review
     </div>
   );
 }
 
-export default RestaurantsList;
+export default AddReview;
