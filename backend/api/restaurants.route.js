@@ -1,6 +1,6 @@
 import express from "express";
 import RestaurantsController from "./restaurants.controller.js"
-import ReviewsCtrl from "./reviews.controller.js"
+import ReviewsController from "./reviews.controller.js"
 
 const router = express.Router()
 
@@ -10,9 +10,9 @@ router.route("/cuisines").get(RestaurantsController.apiGetRestaurantCuisines)
 
 router
     .route("/review")
-    .post(ReviewsCtrl.apiPostReview)
-    .put(ReviewsCtrl.apiUpdateReview)
-    .delete(ReviewsCtrl.apiDeleteReview)
+    .post(ReviewsController.apiPostReview)
+    .put(ReviewsController.apiUpdateReview)
+    .delete(ReviewsController.apiDeleteReview)
 
 
 

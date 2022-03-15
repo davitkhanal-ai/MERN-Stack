@@ -1,5 +1,5 @@
 import mongodb from "mongodb"
-const ObjectId = mongodb.ObjectID
+const ObjectId = mongodb.ObjectId
 
 let reviews
 
@@ -9,7 +9,7 @@ export default class ReviewsDAO {
       return
     }
     try {
-      reviews = await conn.db(process.env.RESTREVIEWS_NS).collection("reviews")
+      reviews = await conn.db(process.env.RESTREVIEW_NS).collection("reviews")
     } catch (e) {
       console.error(`Unable to establish collection handles in userDAO: ${e}`)
     }
@@ -24,6 +24,7 @@ export default class ReviewsDAO {
           restaurant_id: ObjectId(restaurantId), }
 
       return await reviews.insertOne(reviewDoc)
+      
     } catch (e) {
       console.error(`Unable to post review: ${e}`)
       return { error: e }
