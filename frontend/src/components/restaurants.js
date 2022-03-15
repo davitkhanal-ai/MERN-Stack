@@ -1,12 +1,12 @@
 import React from "react"
 
 
-function Restaurants() {
+function Restaurant() {
   return (
-    <div className="app">
+    <div className="App">
      Hello world
     </div>
   );
 }
 
-export default Restaurants;
+export default Restaurant;
